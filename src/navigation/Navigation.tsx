@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from '@modules/onboard';
@@ -11,7 +11,7 @@ const Navigation: FC = () => {
     return (
         <NavigationContainer ref={navigationRef}>
             <Stack.Navigator
-                initialRouteName='Splash'
+                initialRouteName="Splash"
                 screenOptions={{
                     headerShown: false,
                 }}
@@ -20,7 +20,7 @@ const Navigation: FC = () => {
                 <Stack.Screen name="MainNavigator" component={MainNavigator} />
             </Stack.Navigator>
         </NavigationContainer>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;

@@ -1,7 +1,7 @@
-import { View, StyleSheet, Image } from 'react-native'
-import React, { FC, useEffect } from 'react'
-import { Colors, screenHeight, screenWidth } from '@utils/Constants'
-import { resetAndNavigate } from '@navigation/NavigationUtils'
+import { View, StyleSheet, Image } from 'react-native';
+import React, { FC, useEffect } from 'react';
+import { Colors, screenHeight, screenWidth } from '@utils/Constants';
+import { resetAndNavigate } from '@navigation/NavigationUtils';
 
 const Splash: FC = () => {
 
@@ -10,7 +10,7 @@ const Splash: FC = () => {
       resetAndNavigate('MainNavigator');
     }, 1000);
     return () => clearTimeout(timeoutId);
-  }, [])
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -19,22 +19,22 @@ const Splash: FC = () => {
         style={styles.image}
       />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.primary
+    backgroundColor: Colors.primary,
   },
   image: {
     width: screenWidth * 0.35,
     height: screenHeight * 0.35,
-    resizeMode: 'contain'
-  }
-})
+    resizeMode: 'contain',
+  },
+});
 
 
-export default Splash
+export default Splash;

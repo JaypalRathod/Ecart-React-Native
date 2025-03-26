@@ -14,7 +14,7 @@ export const modalStyles = StyleSheet.create({
         right: 10,
         backgroundColor: Colors.active,
         padding: 2,
-        borderRadius: 50
+        borderRadius: 50,
     },
     keyboardAvoidingView: {
         flex: 1,
@@ -33,16 +33,16 @@ export const modalStyles = StyleSheet.create({
     title: {
         fontSize: RFValue(14),
         fontWeight: '400',
-        color: '#222'
+        color: '#222',
     },
     subTitle: {
         marginTop: 5,
         marginBottom: 18,
-        color: "#777"
+        color: '#777',
     },
     input: {
         height: 50,
-        color: "#000",
+        color: '#000',
         borderColor: '#ccc',
         borderWidth: 1,
         borderRadius: 5,
@@ -53,7 +53,7 @@ export const modalStyles = StyleSheet.create({
     textareainput: {
         height: 80,
         borderColor: '#ccc',
-        color: "#000",
+        color: '#000',
         borderWidth: 1,
         borderRadius: 5,
         marginBottom: 15,

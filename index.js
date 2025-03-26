@@ -10,7 +10,7 @@ import {configureReanimatedLogger, ReanimatedLogLevel} from 'react-native-reanim
 configureReanimatedLogger({
     level: ReanimatedLogLevel.warn,
     strict: false,
-})
+});
 
 if (Text.defaultProps) {
     Text.defaultProps.allowFontScalling = false;

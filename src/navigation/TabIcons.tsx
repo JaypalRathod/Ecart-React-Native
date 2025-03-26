@@ -1,5 +1,5 @@
-import Icon from "@components/atoms/Icon";
-import React from "react";
+import Icon from '@components/atoms/Icon';
+import React from 'react';
 
 interface TabIconProps {
     focused: boolean;
@@ -15,8 +15,8 @@ export const HomeIcon: React.FC<TabIconProps> = ({ focused, size, color }) => {
             iconFamily="Ionicons"
             color={color}
         />
-    )
-}
+    );
+};
 
 export const CategoriesIcon: React.FC<TabIconProps> = ({ focused, size, color }) => {
     return (
@@ -26,8 +26,8 @@ export const CategoriesIcon: React.FC<TabIconProps> = ({ focused, size, color })
             iconFamily="Ionicons"
             color={color}
         />
-    )
-}
+    );
+};
 
 export const AccountIcon: React.FC<TabIconProps> = ({ focused, size, color }) => {
     return (
@@ -37,8 +37,8 @@ export const AccountIcon: React.FC<TabIconProps> = ({ focused, size, color }) =>
             iconFamily="Ionicons"
             color={color}
         />
-    )
-}
+    );
+};
 
 export const CartIcon: React.FC<TabIconProps> = ({ focused, size, color }) => {
     return (
@@ -48,5 +48,5 @@ export const CartIcon: React.FC<TabIconProps> = ({ focused, size, color }) => {
             iconFamily="MaterialCommunityIcons"
             color={color}
         />
-    )
-}
+    );
+};

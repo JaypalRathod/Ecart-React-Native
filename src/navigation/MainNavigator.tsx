@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Colors } from '@utils/Constants';
 import { Platform } from 'react-native';
@@ -16,7 +16,7 @@ const MainNavigator: FC = () => {
     const count = 2;
 
     return (
-        <Tab.Navigator initialRouteName='Home'
+        <Tab.Navigator initialRouteName="Home"
             screenOptions={{
                 tabBarShowLabel: false,
                 tabBarHideOnKeyboard: true,
@@ -24,8 +24,8 @@ const MainNavigator: FC = () => {
                 tabBarInactiveTintColor: Colors.inactive,
                 lazy: true,
                 tabBarStyle: {
-                    paddingTop: Platform.OS === 'android' ? 0 : 10
-                }
+                    paddingTop: Platform.OS === 'android' ? 0 : 10,
+                },
             }}>
             <Tab.Screen
                 name="Home"
@@ -64,12 +64,12 @@ const MainNavigator: FC = () => {
                     tabBarBadge: count > 0 ? count : undefined,
                     tabBarBadgeStyle: {
                         height: 16,
-                        width: 16
-                    }
+                        width: 16,
+                    },
                 }}
             />
         </Tab.Navigator >
-    )
-}
+    );
+};
 
-export default MainNavigator
+export default MainNavigator;

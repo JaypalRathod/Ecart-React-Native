@@ -11,7 +11,7 @@ const persistConfig = {
     key: 'root',
     storage: reduxStorage,
     whitelist: ['cart', 'account'],
-    blacklist: []
+    blacklist: [],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

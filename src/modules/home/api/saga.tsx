@@ -1,5 +1,5 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
-import { setData, setError, setLoading } from './slice'
+import { call, put, takeEvery } from 'redux-saga/effects';
+import { setData, setError, setLoading } from './slice';
 import { fetchApiData } from './api';
 import { GET_HOME_CONTENT } from './constants';
 
@@ -14,7 +14,7 @@ function* fetchApiDataSaga(): any {
 }
 
 function* homeSaga() {
-    yield takeEvery(GET_HOME_CONTENT, fetchApiDataSaga)
+    yield takeEvery(GET_HOME_CONTENT, fetchApiDataSaga);
 }
 
 export default homeSaga;

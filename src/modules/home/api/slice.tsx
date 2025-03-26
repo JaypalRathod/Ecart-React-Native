@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-export const homeSlice = createSlice({ 
-    name: "home",
+export const homeSlice = createSlice({
+    name: 'home',
     initialState:{
         data: null,
         loading: false,
@@ -11,7 +11,7 @@ export const homeSlice = createSlice({
         setLoading: (state) => {
             state.loading = true;
         },
-        setData: (state, action) => { 
+        setData: (state, action) => {
             state.loading = false;
             state.data = action.payload;
             state.error = null;
@@ -19,9 +19,9 @@ export const homeSlice = createSlice({
         setError: (state, action) => {
             state.loading = false;
             state.error = action.payload;
-        }
-    }
-})
+        },
+    },
+});
 
 export const { setLoading, setData, setError } = homeSlice.actions;
 export default homeSlice.reducer;
