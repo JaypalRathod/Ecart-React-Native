@@ -1,0 +1,12 @@
+import { View, Text } from 'react-native'
+import React from 'react'
+
+const HorizontalList = () => {
+  return (
+    <View>
+      <Text>HorizontalList</Text>
+    </View>
+  )
+}
+
+export default HorizontalList
