@@ -6,6 +6,7 @@ import Categories from '../organisms/Categories';
 import Sponser from '../organisms/Sponser';
 import VerticalList from '../organisms/VerticalList';
 import HorizontalList from '../organisms/HorizontalList';
+import AnimatedHorizontalList from '../organisms/AnimatedHorizontalList';
 
 const sectionComponents: { [key: string]: React.ComponentType<any> } = {
     ad_carousal: AdCarousal,
@@ -13,6 +14,7 @@ const sectionComponents: { [key: string]: React.ComponentType<any> } = {
     sponser: Sponser,
     vertical_list: VerticalList,
     horizontal_list: HorizontalList,
+    animated_horizontal_list: AnimatedHorizontalList,
 }
 
 const PAGE_SIZE = 4;

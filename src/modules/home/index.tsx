@@ -1,7 +1,5 @@
-import { View, Text, StyleSheet, Platform } from 'react-native';
-import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '@store/reduxHook';
-import { getHomeContent } from './api/actions';
+import { View, StyleSheet, Platform } from 'react-native';
+import React from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, { Extrapolate, interpolate, useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 import { screenHeight } from '@utils/Constants';
