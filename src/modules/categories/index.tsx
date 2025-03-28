@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '@store/reduxHook';
 import { getCategories } from './api/actions';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { FONTS } from '@utils/Constants';
+import { navigate } from '@navigation/NavigationUtils';
 
 const Categories: FC = () => {
   const dispatch = useAppDispatch();
@@ -29,11 +30,20 @@ const Categories: FC = () => {
           numColumns={2}
           keyExtractor={(item) => item._id.toString()}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.itemContainer}>
+            <TouchableOpacity style={styles.itemContainer} onPress={() => navigate('Products', { id: item._id, name: item?.name })}>
               <Image source={{ uri: item.image_url }} style={styles.image} />
               <Text style={styles.name}>{item.name}</Text>
             </TouchableOpacity>
           )
+          }
+          showsVerticalScrollIndicator={false}
+          style={styles.contentConatinor}
+          ListFooterComponent={
+            <>
+              {error &&
+                <Text style={styles.subtitle}>Thre was an error</Text>
+              }
+            </>
           }
         />
       }
@@ -46,6 +56,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E7F9EC',
+  },
+  contentConatinor: {
+    padding: 10
   },
   headerContainer: {
     padding: 20,
