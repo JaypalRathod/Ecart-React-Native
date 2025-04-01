@@ -6,10 +6,17 @@ import { useAppSelector } from '@store/reduxHook';
 import { selectCartItem } from './api/slice';
 import { navigate } from '@navigation/NavigationUtils';
 import { Colors } from '@utils/Constants';
+import OrderItem from './atoms/OrderItem';
+import PlaceOrderButton from './atoms/PlaceOrderButton';
 
 const Cart = () => {
 
   const carts = useAppSelector(selectCartItem);
+  const user = useAppSelector(state => state.account.user) as any;
+
+  const renderItem = ({ item }: any) => (
+    <OrderItem item={item} />
+  );
 
   return (
     <CustomSafeAreaView>
@@ -34,6 +41,10 @@ const Cart = () => {
           </TouchableOpacity>
         </View>
       )}
+
+      {carts?.length > 0 &&
+        <PlaceOrderButton />
+      }
 
     </CustomSafeAreaView>
   );
