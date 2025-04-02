@@ -22,8 +22,8 @@ const Cart = () => {
     <CustomSafeAreaView>
       <View style={styles.container}>
         <Text style={styles.heading}>My Cart</Text>
-        <Text style={styles.number}>🗺️ </Text>
-        <Text style={styles.address}>Deliver to: Login first to place your orders</Text>
+        <Text style={styles.number}>Deliver To : {user?.phone ? user?.phone : "🗺️"}</Text>
+        <Text style={styles.address}>{user?.address ? user?.address : "Login first to place your orders"}</Text>
       </View>
 
       {carts.length > 0 ? (
